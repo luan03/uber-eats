@@ -68,10 +68,10 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
        private lazy var pageControl: UIPageControl = {
            let pc = UIPageControl()
            
-           pc.currentPage = 0
-        pc.numberOfPages = pages.count
-           pc.currentPageIndicatorTintColor = .white
-           pc.pageIndicatorTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.3)
+            pc.currentPage = 0
+            pc.numberOfPages = pages.count
+            pc.currentPageIndicatorTintColor = .white
+            pc.pageIndicatorTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.3)
            
            return pc
        }()

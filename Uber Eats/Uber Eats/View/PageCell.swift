@@ -43,6 +43,7 @@ class PageCell: UICollectionViewCell {
     }()
     
     private let descriptionTextView: UITextView = {
+        // TODO: Is it possible to remove this duplicated code?
            let textView = UITextView()
            let attributedText = NSMutableAttributedString(string: "Browse Restaurants",
                                                 attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 24)])
