@@ -74,8 +74,9 @@ class PageCell: UICollectionViewCell {
         //background
         backgroundColor = UIColor(red: 94/255, green: 162/255, blue: 58/255, alpha: 1)
         
-        // image
+        //image
         addSubview(browseImageView)
+        // TODO: change browseImageView to a more generic name
         browseImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         browseImageView.topAnchor.constraint(equalTo: topAnchor, constant: 200).isActive = true
         browseImageView.widthAnchor.constraint(equalToConstant: 110).isActive = true

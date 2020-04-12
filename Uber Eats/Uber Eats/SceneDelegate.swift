@@ -21,11 +21,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let windowScene = scene as? UIWindowScene {
             self.window = UIWindow(windowScene: windowScene)
+            
+            // Onboarding
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .horizontal
             let swipingController = SwipingController(collectionViewLayout: layout)
+            
+            // Authenticantion
+            let authentication = HomeController()
           
-            self.window!.rootViewController = swipingController
+            self.window!.rootViewController = authentication
             self.window!.makeKeyAndVisible()
         }
         
