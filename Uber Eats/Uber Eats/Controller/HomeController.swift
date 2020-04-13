@@ -67,11 +67,8 @@ class HomeController: UIViewController {
     
     @objc private func handleLogin() {
         
-        // TODO: navigate to the next page
-        //let loginController = LoginController()
-        //self.navigationController?.pushViewController(loginController, animated: true)
-        
-        print("navigate now")
+        let loginController = LoginController()
+        self.navigationController?.pushViewController(loginController, animated: true);
     }
     
     private let signupButton: UIButton = {
@@ -94,7 +91,8 @@ class HomeController: UIViewController {
     
     @objc private func handleSignup() {
         
-        // TODO: navigate to the next page
+        let signupController = SignupController()
+        self.navigationController?.pushViewController(signupController, animated: true);
     }
     
     override func viewDidLoad() {

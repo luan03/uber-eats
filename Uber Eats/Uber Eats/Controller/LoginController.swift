@@ -109,7 +109,12 @@ class LoginController: UIViewController {
        
        @objc private func handleLogin() {
            
-           // TODO: navigate to the next page
+            // Onboarding
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .horizontal
+            let swipingController = SwipingController(collectionViewLayout: layout)
+        
+            self.navigationController?.pushViewController(swipingController, animated: true);
        }
     
     private let loginFBButton: UIButton = {
@@ -130,7 +135,12 @@ class LoginController: UIViewController {
     
     @objc private func handleFBLogin() {
         
-        // TODO: navigate to the next page
+            // Onboarding
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .horizontal
+            let swipingController = SwipingController(collectionViewLayout: layout)
+        
+            self.navigationController?.pushViewController(swipingController, animated: true);
     }
     
     private let loginAppleButton: UIButton = {
@@ -157,7 +167,12 @@ class LoginController: UIViewController {
     
     @objc private func handleAppleLogin() {
         
-        // TODO: navigate to the next page
+        // Onboarding
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let swipingController = SwipingController(collectionViewLayout: layout)
+    
+        self.navigationController?.pushViewController(swipingController, animated: true);
     }
     
     override func viewDidLoad() {
@@ -168,6 +183,7 @@ class LoginController: UIViewController {
     }
     
     fileprivate func setupForm() {
+        
         //input
         view.addSubview(inputEmailTextField)
         NSLayoutConstraint.activate([

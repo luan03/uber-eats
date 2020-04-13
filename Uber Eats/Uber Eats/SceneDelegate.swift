@@ -11,7 +11,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var navigationController: UINavigationController?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -19,19 +19,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        if let windowScene = scene as? UIWindowScene {
-            self.window = UIWindow(windowScene: windowScene)
+//        if let windowScene = scene as? UIWindowScene {
+//            self.window = UIWindow(windowScene: windowScene)
+//
+//            // Onboarding
+//            let layout = UICollectionViewFlowLayout()
+//            layout.scrollDirection = .horizontal
+//            let swipingController = SwipingController(collectionViewLayout: layout)
+//
+//            // Authenticantion
+//            let authentication = HomeController()
+//
+//            self.window!.rootViewController = authentication
+//            self.window!.makeKeyAndVisible()
+//        }
+        
+        if let window = window {
+            let main = HomeController()
+            navigationController = UINavigationController(rootViewController: main)
             
-            // Onboarding
-            let layout = UICollectionViewFlowLayout()
-            layout.scrollDirection = .horizontal
-            let swipingController = SwipingController(collectionViewLayout: layout)
-            
-            // Authenticantion
-            let authentication = LoginController()
-          
-            self.window!.rootViewController = authentication
-            self.window!.makeKeyAndVisible()
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
         }
         
     }
