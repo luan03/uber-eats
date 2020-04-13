@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let swipingController = SwipingController(collectionViewLayout: layout)
             
             // Authenticantion
-            let authentication = HomeController()
+            let authentication = LoginController()
           
             self.window!.rootViewController = authentication
             self.window!.makeKeyAndVisible()

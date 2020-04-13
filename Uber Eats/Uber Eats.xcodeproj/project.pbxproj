@@ -20,6 +20,7 @@
 		0A163F792442C4AA00C42327 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A163F782442C4AA00C42327 /* Page.swift */; };
 		0A163F7E2442E18700C42327 /* SwipingController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A163F7D2442E18700C42327 /* SwipingController+UICollectionView.swift */; };
 		0A367154244394A20003B46D /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A367153244394A20003B46D /* HomeController.swift */; };
+		0A3671562443BB850003B46D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3671552443BB850003B46D /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		0A163F782442C4AA00C42327 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		0A163F7D2442E18700C42327 /* SwipingController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipingController+UICollectionView.swift"; sourceTree = "<group>"; };
 		0A367153244394A20003B46D /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		0A3671552443BB850003B46D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				0A163F74244287B500C42327 /* SwipingController.swift */,
 				0A163F7D2442E18700C42327 /* SwipingController+UICollectionView.swift */,
 				0A367153244394A20003B46D /* HomeController.swift */,
+				0A3671552443BB850003B46D /* LoginController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				0A163F792442C4AA00C42327 /* Page.swift in Sources */,
 				0A163F43244239B400C42327 /* AppDelegate.swift in Sources */,
 				0A367154244394A20003B46D /* HomeController.swift in Sources */,
+				0A3671562443BB850003B46D /* LoginController.swift in Sources */,
 				0A163F45244239B400C42327 /* SceneDelegate.swift in Sources */,
 				0A163F75244287B500C42327 /* SwipingController.swift in Sources */,
 			);

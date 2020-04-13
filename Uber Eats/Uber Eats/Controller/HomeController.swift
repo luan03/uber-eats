@@ -14,7 +14,7 @@ class HomeController: UIViewController {
         let welcome = UIImage(named: "welcome")
         let imageView = UIImageView(image: welcome)
         
-        // this will make the image scale properly in case o rotate the device
+        // this will make the image scale properly
         imageView.contentMode = .scaleAspectFit
         
         // this enables autolayout for our imageView
@@ -68,6 +68,10 @@ class HomeController: UIViewController {
     @objc private func handleLogin() {
         
         // TODO: navigate to the next page
+        //let loginController = LoginController()
+        //self.navigationController?.pushViewController(loginController, animated: true)
+        
+        print("navigate now")
     }
     
     private let signupButton: UIButton = {
@@ -75,7 +79,7 @@ class HomeController: UIViewController {
         
         button.setTitle("Sign Up", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.setTitleColor(UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1), for: .normal)
+        button.setTitleColor(UIColor(red: 65/255, green: 70/255, blue: 101/255, alpha: 1), for: .normal)
         button.backgroundColor = .white
         button.layer.cornerRadius = 30
         button.layer.borderWidth = 1

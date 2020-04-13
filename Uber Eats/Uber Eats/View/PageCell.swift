@@ -33,7 +33,7 @@ class PageCell: UICollectionViewCell {
         let browse = UIImage(named: "browse")
         let imageView = UIImageView(image: browse)
         
-        // this will make the image scale properly in case o rotate the device
+        // this will make the image scale properly
         imageView.contentMode = .scaleAspectFit
         
         // this enables autolayout for our imageView
