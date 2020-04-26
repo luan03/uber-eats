@@ -11,6 +11,14 @@ import UIKit
 
 class LoginController: UIViewController {
     
+    //MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupLayout()
+        setupForm()
+    }
+    
     private let titleLoginTextView: UITextView = {
         let textView = UITextView()
         let attributedText = NSMutableAttributedString(string: "Sign In",
@@ -173,13 +181,6 @@ class LoginController: UIViewController {
         let swipingController = SwipingController(collectionViewLayout: layout)
     
         self.navigationController?.pushViewController(swipingController, animated: true);
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupLayout()
-        setupForm()
     }
     
     fileprivate func setupForm() {

@@ -19,23 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-//        if let windowScene = scene as? UIWindowScene {
-//            self.window = UIWindow(windowScene: windowScene)
-//
-//            // Onboarding
-//            let layout = UICollectionViewFlowLayout()
-//            layout.scrollDirection = .horizontal
-//            let swipingController = SwipingController(collectionViewLayout: layout)
-//
-//            // Authenticantion
-//            let authentication = HomeController()
-//
-//            self.window!.rootViewController = authentication
-//            self.window!.makeKeyAndVisible()
-//        }
-        
         if let window = window {
-            let main = HomeController()
+            let main = MainController()
             navigationController = UINavigationController(rootViewController: main)
             
             window.rootViewController = navigationController

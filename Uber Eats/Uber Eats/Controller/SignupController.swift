@@ -10,6 +10,15 @@ import UIKit
 
 class SignupController: UIViewController {
     
+    //MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupLayout()
+    }
+    
+    // MARK: Properties
+    
+    
     private let titleSignupTextView: UITextView = {
         let textView = UITextView()
         let attributedText = NSMutableAttributedString(string: "Create new account",
@@ -162,14 +171,6 @@ class SignupController: UIViewController {
         
         return textView
     }()
-
-  
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      
-        setupLayout()
-      
-    }
     
     fileprivate func setupLayout() {
         

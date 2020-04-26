@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  MainController.swift
 //  Uber Eats
 //
 //  Created by Luan Fagundes on 12/04/20.
@@ -8,7 +8,15 @@
 
 import UIKit
 
-class HomeController: UIViewController {
+class MainController: UIViewController {
+    
+    //MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupLayout()
+        setupButtonControls()
+    }
     
     private let homeImageView: UIImageView = {
         let welcome = UIImage(named: "welcome")
@@ -93,13 +101,6 @@ class HomeController: UIViewController {
         
         let signupController = SignupController()
         self.navigationController?.pushViewController(signupController, animated: true);
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupLayout()
-        setupButtonControls()
     }
     
     private func setupLayout() {

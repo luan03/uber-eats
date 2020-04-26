@@ -10,6 +10,16 @@ import UIKit
 
 class SwipingController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    //MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupButtonControls()
+        
+        collectionView.register(PageCell.self, forCellWithReuseIdentifier: "cellId")
+        collectionView?.isPagingEnabled = true;
+    }
+    
     let pages = [
         Page(imageName: "browse", headerText: "Browse Restaurants", bodyText: "Welcome to Uber Eats! Login and check out delicious food from hundreds of restaurants around you."),
         Page(imageName: "order", headerText: "Order Food", bodyText: "Hungry? Order food in just a few clicks and we'll take care of you."),
@@ -102,14 +112,5 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         let x = targetContentOffset.pointee.x
         
         pageControl.currentPage = Int(x / view.frame.width)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupButtonControls()
-        
-        collectionView.register(PageCell.self, forCellWithReuseIdentifier: "cellId")
-        collectionView?.isPagingEnabled = true;
     }
 }
