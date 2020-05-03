@@ -239,7 +239,6 @@ class LoginController: UIViewController {
     
     private func setupLayout() {
         
-        //background
         view.backgroundColor = .white
         
         //text

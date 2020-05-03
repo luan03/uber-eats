@@ -105,7 +105,6 @@ class MainController: UIViewController {
     
     private func setupLayout() {
         
-        //background
         view.backgroundColor = .white
         
         //image

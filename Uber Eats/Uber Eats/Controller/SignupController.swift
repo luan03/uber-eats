@@ -10,10 +10,27 @@ import UIKit
 
 class SignupController: UIViewController {
     
+    //MARK: - Properties
+    var delegate: HomeControllerDelegate?
+    
+    //MARK: - Handlers
+    func configureNavigationBar() {
+        navigationController?.navigationBar.barTintColor = .darkGray
+        navigationController?.navigationBar.barStyle = .black
+        
+        navigationItem.title = "Signup Menu"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handlerMenuToggle))
+    }
+    
+    @objc func handlerMenuToggle() {
+        delegate?.handleMenuToggle(forMenuOption: nil)
+    }
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+        configureNavigationBar()
     }
     
     // MARK: Properties
@@ -174,7 +191,6 @@ class SignupController: UIViewController {
     
     fileprivate func setupLayout() {
         
-        //background
         view.backgroundColor = .white
         
         //text

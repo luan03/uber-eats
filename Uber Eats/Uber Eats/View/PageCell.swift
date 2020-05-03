@@ -71,10 +71,8 @@ class PageCell: UICollectionViewCell {
     
     private func setupLayout() {
         
-        //background
         backgroundColor = UIColor(red: 94/255, green: 162/255, blue: 58/255, alpha: 1)
         
-        //image
         addSubview(browseImageView)
         // TODO: change browseImageView to a more generic name
         browseImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
@@ -82,7 +80,6 @@ class PageCell: UICollectionViewCell {
         browseImageView.widthAnchor.constraint(equalToConstant: 110).isActive = true
         browseImageView.heightAnchor.constraint(equalToConstant: 90).isActive = true
         
-        //text
         addSubview(descriptionTextView)
         descriptionTextView.topAnchor.constraint(equalTo: browseImageView.bottomAnchor, constant: 50).isActive = true
         descriptionTextView.leftAnchor.constraint(equalTo: leftAnchor, constant: 15).isActive = true
