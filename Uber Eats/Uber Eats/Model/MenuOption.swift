@@ -21,13 +21,13 @@ enum MenuOption: Int, CustomStringConvertible {
     var description: String {
         switch self {
             
-        case .Home: return "Home"
-        case .Cuisines: return "Cuisines"
-        case .Search: return "Search"
-        case .Cart: return "Cart"
-        case .Profile: return "Profile"
-        case .Orders: return "Orders"
-        case .Logout: return "Logout"
+        case .Home: return "HOME"
+        case .Cuisines: return "CUISINES"
+        case .Search: return "SEARCH"
+        case .Cart: return "CART"
+        case .Profile: return "PROFILE"
+        case .Orders: return "ORDERS"
+        case .Logout: return "LOGOUT"
         }
     }
     

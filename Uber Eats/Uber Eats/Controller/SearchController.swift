@@ -1,14 +1,16 @@
 //
-//  HomeController.swift
+//  SearchController.swift
 //  Uber Eats
 //
-//  Created by Luan Fagundes on 25/04/20.
+//  Created by Luan Fagundes on 03/05/20.
 //  Copyright © 2020 Luan Fagundes. All rights reserved.
 //
 
+import Foundation
+
 import UIKit
 
-class HomeController: UIViewController {
+class SearchController: UIViewController {
     
     //MARK: - Properties
     var delegate: ViewControllerDelegate?
@@ -30,7 +32,7 @@ class HomeController: UIViewController {
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.barStyle = .black
 
-        navigationItem.title = "Home"
+        navigationItem.title = "Search"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handlerMenuToggle))
     }
 

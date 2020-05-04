@@ -20,7 +20,7 @@ class MenuOptionCell: UITableViewCell {
     
     let descriptionText: UILabel = {
         let description = UILabel()
-        description.textColor = .white
+        description.textColor = .darkGray
         description.font = UIFont.systemFont(ofSize: 16)
         description.text = "sample text"
         return description
@@ -30,13 +30,13 @@ class MenuOptionCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        backgroundColor = .darkGray
+        backgroundColor = .white
         selectionStyle = .none
         
         addSubview(iconImageView)
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
         iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        iconImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 12).isActive = true
+        iconImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 55).isActive = true
         iconImageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
         iconImageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
         

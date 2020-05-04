@@ -11,11 +11,11 @@ import UIKit
 class SignupController: UIViewController {
     
     //MARK: - Properties
-    var delegate: HomeControllerDelegate?
+    var delegate: ViewControllerDelegate?
     
     //MARK: - Handlers
     func configureNavigationBar() {
-        navigationController?.navigationBar.barTintColor = .darkGray
+        navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.barStyle = .black
         
         navigationItem.title = "Signup Menu"

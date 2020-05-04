@@ -95,20 +95,38 @@ class ContainerController: UIViewController {
         case .Home:
             print("Home")
             
-            let homeController = SignupController()
-            homeController.delegate = self
-            moveToNext(controller: homeController)
+            configureHomeController()
             
         case .Cuisines:
             print("Cuisines")
+            
+            let controller = CuisinesController()
+            controller.delegate = self
+            moveToNext(controller: controller)
         case .Search:
             print("Search")
+            
+            let controller = SearchController()
+            controller.delegate = self
+            moveToNext(controller: controller)
         case .Cart:
             print("Cart")
+            
+            let controller = CartController()
+            controller.delegate = self
+            moveToNext(controller: controller)
         case .Profile:
             print("Profile")
+            
+            let controller = ProfileController()
+            controller.delegate = self
+            moveToNext(controller: controller)
         case .Orders:
             print("Orders")
+            
+            let controller = OrdersController()
+            controller.delegate = self
+            moveToNext(controller: controller)
         case .Logout:
             print("Logout")
         }
@@ -124,7 +142,7 @@ class ContainerController: UIViewController {
     
 }
 
-extension ContainerController: HomeControllerDelegate {
+extension ContainerController: ViewControllerDelegate {
     func handleMenuToggle(forMenuOption menuOption: MenuOption?) {
         
         if !isExpanded {

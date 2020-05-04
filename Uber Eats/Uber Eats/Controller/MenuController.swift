@@ -14,7 +14,7 @@ class MenuController: UIViewController {
     
     //MARK: - Properties
     var tableView: UITableView!
-    var delegate: HomeControllerDelegate?
+    var delegate: ViewControllerDelegate?
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class MenuController: UIViewController {
     }
     
     fileprivate func setupLayout() {
-        view.backgroundColor = .black
+        view.backgroundColor = .white
     }
     
     //MARK: - Handlers
@@ -35,16 +35,16 @@ class MenuController: UIViewController {
         tableView.dataSource = self
         
         tableView.register(MenuOptionCell.self, forCellReuseIdentifier: reuseIdentifier)
-        tableView.backgroundColor = .darkGray
+        tableView.backgroundColor = .white
         tableView.separatorStyle = .none
-        tableView.rowHeight = 80
+        tableView.rowHeight = 50
         
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 200).isActive = true
     }
 }
 

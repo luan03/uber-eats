@@ -1,14 +1,14 @@
 //
-//  HomeController.swift
+//  ProfileController.swift
 //  Uber Eats
 //
-//  Created by Luan Fagundes on 25/04/20.
+//  Created by Luan Fagundes on 03/05/20.
 //  Copyright © 2020 Luan Fagundes. All rights reserved.
 //
 
 import UIKit
 
-class HomeController: UIViewController {
+class ProfileController: UIViewController {
     
     //MARK: - Properties
     var delegate: ViewControllerDelegate?
@@ -30,7 +30,7 @@ class HomeController: UIViewController {
         navigationController?.navigationBar.barTintColor = .white
         navigationController?.navigationBar.barStyle = .black
 
-        navigationItem.title = "Home"
+        navigationItem.title = "Profile"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "menu").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handlerMenuToggle))
     }
 
@@ -38,3 +38,4 @@ class HomeController: UIViewController {
         delegate?.handleMenuToggle(forMenuOption: nil)
     }
 }
+
